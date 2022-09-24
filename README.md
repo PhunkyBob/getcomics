@@ -11,7 +11,7 @@ Result can be saved in a file.
 
 ## Usage
 ```
-> python -m getcomics [OPTIONS] [SEARCH]
+> python getcomics.py [OPTIONS] [SEARCH]
 
 Options:
   --host TEXT        Filter links on specific host.
