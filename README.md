@@ -27,7 +27,7 @@ You can run the script with all parameters in the commande lines.
 
 Example :  
 ```
-python -m getcomics --pages 10 --limit-date "2022-09-01" --host ZIPPYSHARE --host MEGA --output output.csv "star wars"
+python getcomics.py --pages 10 --limit-date "2022-09-01" --host ZIPPYSHARE --host MEGA --output output.csv "star wars"
 ```
 
 This will search for releases corresponding to the search `star wars`.  
@@ -41,7 +41,7 @@ Result will be saved into `output.csv`.
 You can run the script without any parameters. They will be asked. 
 Example :  
 ```
-python -m getcomics
+python getcomics.py
 ``` 
 shows
 ```
