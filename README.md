@@ -1,4 +1,4 @@
-# GetComics-Links
+# GetComics - Links
 
 Get direct links for [GetComics.info](https://getcomics.info) releases. 
 
