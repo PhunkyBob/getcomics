@@ -75,7 +75,7 @@ Result saved in "output.csv".
 
 ## Install
 ```
-git clone 
+git clone https://github.com/PhunkyBob/getcomics.git
 cd getcomics
 python -m venv venv
 venv\Scripts\activate

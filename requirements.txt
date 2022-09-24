@@ -1,0 +1,5 @@
+click==7.1.2
+pytest==7.1.2
+requests==2.26.0
+beautifulsoup4==4.11.1
+inquirer==2.10.0
