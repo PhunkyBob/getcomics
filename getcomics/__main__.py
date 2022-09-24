@@ -7,7 +7,11 @@ You can search with the following criteria:
 - Number of page results. 
 Result can be saved in a file. 
 """
-import getcomics.gc as gc
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from getcomics.gc import GetComics
 import getcomics.tools as tools
 import getcomics.default_values as default_values
