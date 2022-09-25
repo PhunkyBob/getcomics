@@ -16,13 +16,13 @@ def check_version(current_version):
     latest_version_url = "https://raw.githubusercontent.com/PhunkyBob/getcomics/master/VERSION"
     res = requests.get(latest_version_url)
     if res.status_code != 200:
-        print(f"Version {current_version} (impossible de vérifier la version officielle)")
+        print(f"Version {current_version} (can't check official version)")
     else:
         latest_version = res.text.strip()
         if latest_version == current_version:
-            print(f"Version {current_version} (version officielle)")
+            print(f"Version {current_version} (official version)")
         else:
-            print(f"Version {current_version} (la version officielle est différente: {latest_version})")
+            print(f"Version {current_version} (official version is different: {latest_version})")
             print("Please check https://github.com/PhunkyBob/getcomics/releases/latest")
     print()
 
