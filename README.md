@@ -83,3 +83,8 @@ venv\Scripts\activate
 pip install -U pip
 pip install -r requirements.txt
 ```
+
+## Compile
+```
+python -m nuitka --standalone --onefile --follow-imports --windows-icon-from-ico=getcomics.ico getcomics.py
+```

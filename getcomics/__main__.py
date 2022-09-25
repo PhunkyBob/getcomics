@@ -21,7 +21,7 @@ import getcomics.default_values as default_values
 import click
 import inquirer
 import os
-
+import jinxed.terminfo.vtwin10  # Hidden import for compilation
 
 @click.command()
 @click.argument("search", required=False)
