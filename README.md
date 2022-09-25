@@ -88,3 +88,4 @@ pip install -r requirements.txt
 ```
 python -m nuitka --standalone --onefile --follow-imports --windows-icon-from-ico=getcomics.ico getcomics.py
 ```
+You can try the [experimental binary for Windows](https://github.com/PhunkyBob/getcomics/releases/latest). 
