@@ -7,6 +7,9 @@ You can search with the following criteria:
 - Number of page results. 
 Result can be saved in a file. 
 """
+
+__version__ = "0.1.0"
+
 import os
 import sys
 
@@ -31,7 +34,12 @@ import os
 )
 @click.option("--pages", help="Search on the first N pages.", type=int, default=default_values.DEFAULT_PAGES)
 @click.option("-o", "--output", help="Save result to file.")
-def main(search, host, limit_date, pages, output) -> None:
+@click.option("-v", "--version", is_flag=True, help="Display version.")
+def main(search, host, limit_date, pages, output, version) -> None:
+    tools.check_version(__version__)
+    if version:
+        sys.exit(0)
+
     is_command_line = True
     if not search:
         search, host, limit_date, pages, output = tools.override_parameters(search, host, limit_date, pages, output)

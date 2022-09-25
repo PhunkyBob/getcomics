@@ -19,6 +19,7 @@ Options:
                      MM-DD).
   --pages INTEGER    Search on the first N pages.
   -o, --output TEXT  Save result to file.
+  -v, --version      Display version.
   --help             Show this message and exit.
 ```
 
