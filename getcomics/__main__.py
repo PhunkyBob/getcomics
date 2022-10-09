@@ -8,7 +8,7 @@ You can search with the following criteria:
 Result can be saved in a file. 
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 import os
 import sys
@@ -22,6 +22,7 @@ import click
 import inquirer
 import os
 import jinxed.terminfo.vtwin10  # Hidden import for compilation
+
 
 @click.command()
 @click.argument("search", required=False)

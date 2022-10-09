@@ -7,6 +7,7 @@ import re
 import asyncio
 
 from getcomics import tools
+from tqdm.asyncio import tqdm
 
 # import tools
 import csv
@@ -78,7 +79,9 @@ class GetComics:
                 main_url = title.find("a").get("href")
                 all_urls.append(main_url)
 
-        results = await asyncio.gather(*[GetComics.get_infos_from_page_async(url) for url in all_urls])
+        results = await tqdm.gather(
+            *[GetComics.get_infos_from_page_async(url) for url in all_urls], desc=f"Page {page}", leave=False
+        )
         results = [elem for elem in results if datetime.datetime.strptime(elem["date"], "%Y-%m-%d") >= self.limit_date]
 
         return results
@@ -171,7 +174,7 @@ class GetComics:
             for h, l in links.items():
                 if not hosts_filter or h in hosts_filter:
                     all_urls.append(l)
-        results = await asyncio.gather(*[tools.get_link_location_async(url) for url in all_urls])
+        results = await tqdm.gather(*[tools.get_link_location_async(url) for url in all_urls], desc="Links")
         url_real_location = {old: new for old, new in results}
 
         output = []

@@ -1,0 +1,1 @@
+python -m nuitka --standalone --onefile --follow-imports --windows-icon-from-ico=getcomics.ico getcomics.py
